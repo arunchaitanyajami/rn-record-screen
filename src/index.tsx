@@ -37,7 +37,7 @@ const useComponentLayout = () => {
 export const useRecordScreenZone = () => {
   const { layout, onLayout } = useComponentLayout();
 
-	const startRecording: StartRecording = (config: object) => {
+	const startRecording: StartRecording = (config) => {
     return new Promise(async (resolve, reject) => {
       const res = await RecordScreen.startRecording(config).catch(
         reject
