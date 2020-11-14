@@ -14,7 +14,7 @@ import { createNewFilePath, calcCropLayout } from './util';
 
 interface Props extends ViewProps {}
 
-type StartRecording = () => Promise<RecordingStartResponse>;
+type StartRecording = (config: object) => Promise<RecordingStartResponse>;
 type StopRecording = () => Promise<RecordingResponse>;
 type CleanRecord = () => void;
 
@@ -37,9 +37,9 @@ const useComponentLayout = () => {
 export const useRecordScreenZone = () => {
   const { layout, onLayout } = useComponentLayout();
 
-  const startRecording: StartRecording = () => {
+	const startRecording: StartRecording = (config: object) => {
     return new Promise(async (resolve, reject) => {
-      const res = await RecordScreen.startRecording({ mic: false }).catch(
+      const res = await RecordScreen.startRecording(config).catch(
         reject
       );
       if (res) {

@@ -17,7 +17,7 @@ export const App = () => {
   const { startRecording, stopRecording, RecordScreenZone } = useRecordScreenZone();
 
   const _handleOnStartRecording = () => {
-    startRecording()
+    startRecording({mic: true})
   }
 
   const _handleOnStopRecording = async () => {
