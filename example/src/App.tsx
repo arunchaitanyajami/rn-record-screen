@@ -34,7 +34,7 @@ export default function App() {
     } else {
       setUri('');
       setRecording(true);
-      await startRecording().catch((error) => {
+      await startRecording({mic:true}).catch((error) => {
         console.warn(error);
         setRecording(false);
         setUri('');
