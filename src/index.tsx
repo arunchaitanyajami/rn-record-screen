@@ -39,7 +39,7 @@ export const useRecordScreenZone = () => {
 
   const startRecording: StartRecording = () => {
     return new Promise(async (resolve, reject) => {
-      const res = await RecordScreen.startRecording({ mic: false }).catch(
+      const res = await RecordScreen.startRecording({ mic: true }).catch(
         reject
       );
       if (res) {
