@@ -32,11 +32,11 @@ export const App = () => {
       <Navbar />
       <View>
         <View>
-          <Text>Not recording area<Text>
+          <Text>Not recording area</Text>
         </View>
         <RecordScreenZone>
           <View>
-            <Text>Recording area<Text>
+            <Text>Recording area</Text>
           </View>
         </RecordScreenZone>
       </View>
